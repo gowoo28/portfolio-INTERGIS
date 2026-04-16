@@ -47,6 +47,7 @@
     
     .scroll-container {
       -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -152,42 +153,42 @@
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
         </div>
         <div class="relative">
-          <div class="absolute hidden md:block left-[50%] top-2 bottom-0 w-[4px] bg-slate-100 -translate-x-1/2"></div>
-          <div class="space-y-12 md:space-y-12">
+          <div class="absolute left-[50%] top-2 bottom-0 w-[2px] md:w-[4px] bg-slate-100 -translate-x-1/2"></div>
+          <div class="space-y-8 md:space-y-12">
             
-            <div class="relative flex flex-col items-center md:flex-row md:justify-between w-full group text-center md:text-left">
-              <div class="static md:absolute mb-3 md:mb-0 md:left-[50%] md:top-2 w-4 h-4 md:w-6 md:h-6 bg-blue-600 rounded-full ring-4 md:ring-8 ring-white shadow-md md:-translate-x-1/2 group-hover:scale-125 transition-transform"></div>
-              <div class="w-full md:w-1/2 md:text-right pt-0.5 md:pr-16 mb-2 md:mb-0">
-                <div class="text-lg md:text-xl font-bold text-blue-600 tracking-tight">2019. 12 ~ 2026. 03</div>
-                <div class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-1 md:mt-2">Company</div>
+            <div class="relative flex flex-row justify-between w-full group">
+              <div class="absolute left-[50%] top-1 md:top-2 w-4 h-4 md:w-6 md:h-6 bg-blue-600 rounded-full ring-4 md:ring-8 ring-white shadow-md -translate-x-1/2 group-hover:scale-125 transition-transform"></div>
+              <div class="w-1/2 text-right pt-0 md:pt-0.5 pr-4 md:pr-16">
+                <div class="text-xs sm:text-sm md:text-xl font-bold text-blue-600 tracking-tight break-keep">2019. 12 ~ 2026. 03</div>
+                <div class="text-[9px] sm:text-[10px] md:text-sm font-bold text-slate-400 uppercase tracking-widest mt-0.5 md:mt-2">Company</div>
               </div>
-              <div class="w-full md:w-1/2 pt-2 md:pt-0 md:pl-16">
-                <h5 class="text-2xl md:text-3xl font-black text-slate-900 mb-2 md:mb-3 tracking-tight break-keep">(주)와이위</h5>
-                <p class="text-lg text-slate-600 font-bold mb-3">전략기획실 PM</p>
-              </div>
-            </div>
-
-            <div class="relative flex flex-col items-center md:flex-row md:justify-between w-full group text-center md:text-left">
-              <div class="static md:absolute mb-3 md:mb-0 md:left-[50%] md:top-2 w-4 h-4 md:w-6 md:h-6 bg-slate-300 rounded-full ring-4 md:ring-8 ring-white shadow-md md:-translate-x-1/2 group-hover:scale-125 transition-transform"></div>
-              <div class="w-full md:w-1/2 md:text-right pt-0.5 md:pr-16 mb-2 md:mb-0">
-                <div class="text-lg md:text-xl font-bold text-slate-500 tracking-tight">2013. 03 ~ 2020. 02</div>
-                <div class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-1 md:mt-2">University</div>
-              </div>
-              <div class="w-full md:w-1/2 pt-2 md:pt-0 md:pl-16">
-                <h5 class="text-2xl md:text-3xl font-black text-slate-800 mb-2 md:mb-3 tracking-tight break-keep">경성대학교</h5>
-                <p class="text-lg text-slate-500 font-bold mb-3">광고홍보학과</p>
+              <div class="w-1/2 pt-0 pl-4 md:pl-16 text-left">
+                <h5 class="text-sm sm:text-base md:text-3xl font-black text-slate-900 mb-0.5 md:mb-3 tracking-tight break-keep">(주)와이위</h5>
+                <p class="text-[11px] sm:text-xs md:text-lg text-slate-600 font-bold mb-0 md:mb-3">전략기획실 PM</p>
               </div>
             </div>
 
-            <div class="relative flex flex-col items-center md:flex-row md:justify-between w-full group text-center md:text-left">
-              <div class="static md:absolute mb-3 md:mb-0 md:left-[50%] md:top-2 w-4 h-4 md:w-6 md:h-6 bg-slate-200 rounded-full ring-4 md:ring-8 ring-white shadow-md md:-translate-x-1/2 group-hover:scale-125 transition-transform"></div>
-              <div class="w-full md:w-1/2 md:text-right pt-0.5 md:pr-16 mb-2 md:mb-0">
-                <div class="text-lg md:text-xl font-bold text-slate-500 tracking-tight">2010. 03 ~ 2013. 02</div>
-                <div class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-1 md:mt-2">High School</div>
+            <div class="relative flex flex-row justify-between w-full group">
+              <div class="absolute left-[50%] top-1 md:top-2 w-4 h-4 md:w-6 md:h-6 bg-slate-300 rounded-full ring-4 md:ring-8 ring-white shadow-md -translate-x-1/2 group-hover:scale-125 transition-transform"></div>
+              <div class="w-1/2 text-right pt-0 md:pt-0.5 pr-4 md:pr-16">
+                <div class="text-xs sm:text-sm md:text-xl font-bold text-slate-500 tracking-tight break-keep">2013. 03 ~ 2020. 02</div>
+                <div class="text-[9px] sm:text-[10px] md:text-sm font-bold text-slate-400 uppercase tracking-widest mt-0.5 md:mt-2">University</div>
               </div>
-              <div class="w-full md:w-1/2 pt-2 md:pt-0 md:pl-16">
-                <h5 class="text-2xl md:text-3xl font-black text-slate-700 mb-2 md:mb-3 tracking-tight break-keep">부산중앙고등학교</h5>
-                <p class="text-lg text-slate-500 font-bold">문과</p>
+              <div class="w-1/2 pt-0 pl-4 md:pl-16 text-left">
+                <h5 class="text-sm sm:text-base md:text-3xl font-black text-slate-800 mb-0.5 md:mb-3 tracking-tight break-keep">경성대학교</h5>
+                <p class="text-[11px] sm:text-xs md:text-lg text-slate-500 font-bold mb-0 md:mb-3">광고홍보학과</p>
+              </div>
+            </div>
+
+            <div class="relative flex flex-row justify-between w-full group">
+              <div class="absolute left-[50%] top-1 md:top-2 w-4 h-4 md:w-6 md:h-6 bg-slate-200 rounded-full ring-4 md:ring-8 ring-white shadow-md -translate-x-1/2 group-hover:scale-125 transition-transform"></div>
+              <div class="w-1/2 text-right pt-0 md:pt-0.5 pr-4 md:pr-16">
+                <div class="text-xs sm:text-sm md:text-xl font-bold text-slate-500 tracking-tight break-keep">2010. 03 ~ 2013. 02</div>
+                <div class="text-[9px] sm:text-[10px] md:text-sm font-bold text-slate-400 uppercase tracking-widest mt-0.5 md:mt-2">High School</div>
+              </div>
+              <div class="w-1/2 pt-0 pl-4 md:pl-16 text-left">
+                <h5 class="text-sm sm:text-base md:text-3xl font-black text-slate-700 mb-0.5 md:mb-3 tracking-tight break-keep">부산중앙고등학교</h5>
+                <p class="text-[11px] sm:text-xs md:text-lg text-slate-500 font-bold mb-0 md:mb-3">문과</p>
               </div>
             </div>
 
@@ -316,7 +317,7 @@
             </span>
           </div>
 
-          <div class="scroll-container flex flex-nowrap items-center justify-start lg:justify-center -space-x-5 lg:-space-x-8 py-6 px-6 overflow-x-auto lg:overflow-visible bg-transparent snap-x snap-mandatory cursor-grab active:cursor-grabbing w-full">
+          <div id="strengths-scroll" class="scroll-container flex flex-nowrap items-center justify-start lg:justify-center -space-x-5 lg:-space-x-8 py-6 px-12 md:px-6 overflow-x-auto lg:overflow-visible bg-transparent snap-x snap-mandatory cursor-grab active:cursor-grabbing w-full">
             <div class="flex-shrink-0 relative z-10 group/item cursor-pointer hover:z-50 transition-all duration-300 snap-center">
               <div class="relative flex items-center justify-center w-[180px] h-[180px] lg:w-[250px] lg:h-[250px] border border-blue-400 rounded-full bg-transparent group-hover/item:bg-blue-600 group-hover/item:border-blue-600 group-hover/item:scale-105 group-hover/item:shadow-2xl transition-all duration-300 ease-out bg-slate-50">
                 <div class="flex flex-col items-center justify-center text-center gap-1.5 w-full px-4 max-w-[140px] lg:max-w-[200px]">
@@ -438,7 +439,7 @@
         <div class="mb-8 px-6 max-w-3xl mx-auto text-center">
           <h5 class="text-2xl md:text-3xl font-black text-slate-900 mb-3 break-keep">블록체인 기반 환적모니터링시스템 홍보 콘텐츠 제작 경험</h5>
           <p class="text-[13px] sm:text-sm md:text-lg text-slate-700 leading-relaxed font-medium tracking-tight break-keep">
-            블록체인 기반 환적모니터링시스템 홍보 콘텐츠 제작 프로젝트를 통해<br>부산항의 디지털 전환 및 항만 물류 프로세 직을 깊이 있게 경험했습니다.
+            블록체인 기반 환적모니터링시스템 홍보 콘텐츠 제작 프로젝트를 통해<br>부산항의 디지털 전환 및 항만 물류 프로세스를 깊이 있게 경험했습니다.
           </p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-6">
@@ -654,6 +655,15 @@
   </footer>
 
   <script>
+    // Strengths 모바일 초기 스크롤 중앙 정렬
+    window.addEventListener('DOMContentLoaded', () => {
+      const strengthsScroll = document.getElementById('strengths-scroll');
+      if (strengthsScroll && window.innerWidth < 1024) { 
+        // 화면 로드 시 스크롤바를 4개 요소의 한가운데로 자동 이동
+        strengthsScroll.scrollLeft = (strengthsScroll.scrollWidth - strengthsScroll.clientWidth) / 2;
+      }
+    });
+
     const scrollContainers = document.querySelectorAll('.scroll-container');
     let isDown = false; let startX; let scrollLeft;
     scrollContainers.forEach(container => {
