@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta property="og:title" content="박상현 포트폴리오 | Client Relations Expert">
+  <meta property="og:description" content="항만 실무를 아는 고객 지향 소통 전문가, 박상현의 포트폴리오입니다.">
+  <meta property="og:image" content="https://i.postimg.cc/vTZHW9R4/my-notion-face-transparent.png">
+  <meta property="og:type" content="website">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
   <title>박상현 포트폴리오</title>
@@ -30,7 +36,6 @@
     }
     .animate-swipe { animation: swipe 1.5s ease-in-out infinite; }
 
-    /* 게이지바 빛 반사 애니메이션 추가 */
     @keyframes shimmer {
       100% { transform: translateX(100%); }
     }
@@ -54,6 +59,19 @@
       -webkit-overflow-scrolling: touch;
       scroll-behavior: smooth;
     }
+
+    /* 새로 추가된 스크롤 애니메이션 클래스 */
+    .reveal { 
+      opacity: 0; 
+      transform: translateY(40px); 
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    }
+    .reveal.active { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+    .reveal-delay-1 { transition-delay: 0.15s; }
+    .reveal-delay-2 { transition-delay: 0.3s; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
@@ -75,24 +93,24 @@
     <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-indigo-100 rounded-full blur-[120px] opacity-60"></div>
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full z-10">
       <div class="order-2 lg:order-1 text-center lg:text-left mb-16 lg:mb-0 mt-8 lg:mt-0">
-        <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-bold uppercase tracking-wider">About Me</div>
+        <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-bold uppercase tracking-wider reveal">About Me</div>
         
-        <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-5 leading-[1.2] tracking-tight text-slate-950 break-keep">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-5 leading-[1.2] tracking-tight text-slate-950 break-keep reveal">
           항만 실무를 아는<br>고객 지향 소통 전문가<br>
           <span class="whitespace-nowrap"> <span class="text-blue-600 font-black">박상현</span>입니다.</span>
         </h1>
         
-        <div class="flex flex-col items-center lg:items-start text-[12px] sm:text-[15px] md:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 tracking-tight break-keep">
-          <span>유연한 소통으로 복잡한 이해관계를 조율하며 운영의 안정을 이끌고<br>정교한 행정 처리로 24.5억 원 규모의 프로젝트를 완벽히 완수했습니다.<br>준비된 실무 전문가로서 인터지스의 운영 효율 극대화에 기여하겠습니다.</span>
+        <div class="flex flex-col items-center lg:items-start text-[12px] sm:text-[15px] md:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 tracking-tight break-keep reveal reveal-delay-1">
+          <span>유연한 소통으로 복잡한 이해관계를 조율하며 운영의 안정을 이끌고<br>정교한 행정 처리로 24.5억 원 규모의 프로젝트를 완벽히 완수했습니다.<br>준비된 실무 전문가로서 운영 효율 극대화에 기여하겠습니다.</span>
         </div>
 
-        <div class="flex flex-wrap justify-center lg:justify-start gap-5">
+        <div class="flex flex-wrap justify-center lg:justify-start gap-5 reveal reveal-delay-2">
           <a href="#resume" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-xl shadow-blue-200 inline-block">이력사항 보기</a>
           <a href="#experience" class="bg-white hover:bg-slate-50 border border-slate-200 px-10 py-4 rounded-xl font-bold shadow-sm transition-all transform hover:-translate-y-1 inline-block">실무역량 보기</a>
         </div>
       </div>
       
-      <div class="order-1 lg:order-2 flex justify-center relative mt-10 lg:mt-0 mb-12 lg:mb-0">
+      <div class="order-1 lg:order-2 flex justify-center relative mt-10 lg:mt-0 mb-12 lg:mb-0 reveal">
         <div class="relative w-64 h-64 md:w-[420px] md:h-[420px]">
           <div class="absolute inset-0 bg-blue-200/40 rounded-full blur-[80px]"></div>
           <img src="https://i.postimg.cc/vTZHW9R4/my-notion-face-transparent.png" alt="Profile" class="relative z-20 w-full h-full object-contain drop-shadow-2xl">
@@ -128,13 +146,10 @@
     <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
       <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-[120px]"></div>
       <div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-indigo-50/40 rounded-full blur-[150px]"></div>
-      <div class="absolute top-10 left-0 w-full overflow-hidden leading-none select-none opacity-[0.03] pointer-events-none z-0 hidden md:block">
-        <h2 class="text-[15vw] font-black whitespace-nowrap uppercase text-slate-900">RESUME</h2>
-      </div>
     </div>
 
     <div class="max-w-6xl mx-auto px-6 relative z-10 pt-24 md:pt-[18vw]">
-      <div class="flex flex-col md:flex-row items-center md:items-end justify-between border-b-4 border-slate-900 pb-8 mb-10 gap-8">
+      <div class="flex flex-col md:flex-row items-center md:items-end justify-between border-b-4 border-slate-900 pb-8 mb-10 gap-8 reveal">
         <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div class="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden bg-slate-100 shadow-inner border border-slate-100">
              <img src="https://i.postimg.cc/vTZHW9R4/my-notion-face-transparent.png" alt="Profile" class="w-full h-full object-contain scale-110 pt-4">
@@ -151,7 +166,7 @@
         </div>
       </div>
 
-      <div class="mb-16 md:mb-20 max-w-4xl mx-auto">
+      <div class="mb-16 md:mb-20 max-w-4xl mx-auto reveal">
         <div class="flex items-center justify-center gap-6 mb-8 md:mb-12 text-center">
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter shrink-0">Journey</h4>
@@ -201,7 +216,7 @@
         </div>
       </div>
 
-      <div class="mb-16 md:mb-20 max-w-4xl mx-auto">
+      <div class="mb-16 md:mb-20 max-w-4xl mx-auto reveal">
         <div class="flex items-center justify-center gap-6 mb-8 md:mb-12 text-center">
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter shrink-0">Certifications</h4>
@@ -231,7 +246,7 @@
         </div>
       </div>
 
-      <div class="mb-16 md:mb-20 max-w-4xl mx-auto">
+      <div class="mb-16 md:mb-20 max-w-4xl mx-auto reveal">
         <div class="flex items-center justify-center gap-6 mb-8 md:mb-12 text-center">
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter shrink-0">Skills</h4>
@@ -289,7 +304,7 @@
         </div>
       </div>
 
-      <div class="mb-16 md:mb-20 max-w-4xl mx-auto">
+      <div class="mb-16 md:mb-20 max-w-4xl mx-auto reveal">
         <div class="flex items-center justify-center gap-6 mb-8 md:mb-12 text-center">
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter shrink-0">Awards</h4>
@@ -314,7 +329,7 @@
         </div>
       </div>
 
-      <div class="max-w-7xl mx-auto w-full pb-8 md:pb-12 relative z-10 flex flex-col items-center">
+      <div class="max-w-7xl mx-auto w-full pb-8 md:pb-12 relative z-10 flex flex-col items-center reveal">
         <div class="flex items-center justify-center gap-6 mb-8 w-full max-w-4xl mx-auto px-6 text-center">
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter shrink-0">Strengths</h4>
@@ -366,26 +381,22 @@
   </section>
 
   <section id="experience" class="py-16 md:py-24 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-100 relative z-10 overflow-hidden border-t border-slate-200">
-    <div class="absolute top-10 left-0 w-full overflow-hidden leading-none select-none opacity-[0.03] pointer-events-none z-0 hidden md:block">
-        <h2 class="text-[15vw] font-black whitespace-nowrap uppercase text-slate-900">EXPERIENCE</h2>
-    </div>
-    
     <div class="max-w-7xl mx-auto px-6 relative z-10 pt-24 md:pt-[18vw]">
-      <div class="flex items-center justify-center gap-6 mb-10 w-full max-w-4xl mx-auto px-6 text-center">
+      <div class="flex items-center justify-center gap-6 mb-10 w-full max-w-4xl mx-auto px-6 text-center reveal">
         <div class="h-1 flex-grow bg-slate-200 hidden md:block"></div>
         <h4 class="text-4xl md:text-6xl font-black text-slate-950 tracking-tighter shrink-0">Relevant Experience</h4>
         <div class="h-1 flex-grow bg-slate-200 hidden md:block"></div>
       </div>
       
       <div class="mb-16">
-        <div class="mb-8 px-6 max-w-3xl mx-auto text-center">
+        <div class="mb-8 px-6 max-w-3xl mx-auto text-center reveal">
           <h5 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 mb-3 whitespace-nowrap sm:whitespace-normal tracking-tighter">부산항 및 BPA 소개 홍보동영상 제작 경험</h5>
           <p class="text-[13px] sm:text-sm md:text-lg text-slate-700 leading-relaxed font-medium tracking-tight break-keep">
             부산항만공사와 진행한 부산항 및 BPA 홍보 프로젝트를 통해<br> 
-            인터지스를 포함한 부산항 전반의 물류 현장 경험을 쌓았습니다.
+            관련 산업 전반의 물류 현장 경험을 쌓았습니다.
           </p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-6 reveal">
           <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative">
             <img src="https://i.postimg.cc/L8dFb7vj/1.png" alt="부산항 프로젝트 1" class="w-full h-full object-cover">
           </div>
@@ -420,7 +431,7 @@
       </div>
       
       <div>
-        <div class="mb-8 px-6 max-w-3xl mx-auto text-center">
+        <div class="mb-8 px-6 max-w-3xl mx-auto text-center reveal">
           <h5 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 mb-3 break-keep">블록체인 기반 환적모니터링시스템<br class="block md:hidden">홍보 콘텐츠 제작 경험</h5>
           <p class="text-[13px] sm:text-sm md:text-lg text-slate-700 leading-relaxed font-medium tracking-tight break-keep">
             블록체인 기반 환적모니터링시스템 홍보 콘텐츠 제작<br class="block md:hidden">
@@ -428,7 +439,7 @@
             프로세스를 깊이 있게 경험했습니다.
           </p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-6 reveal">
           <div class="bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative aspect-[4/3]">
              <img src="https://i.postimg.cc/vHCxSQpj/11.png" alt="스마트엠투엠 프로젝트 11" class="w-full h-full object-cover">
           </div>
@@ -456,7 +467,7 @@
         </div>
       </div>
 
-      <div class="mt-16 md:mt-24 relative w-full z-10">
+      <div class="mt-16 md:mt-24 relative w-full z-10 reveal">
         <div class="flex items-center justify-center gap-6 mb-8 w-full max-w-4xl mx-auto px-6 text-center">
           <div class="h-1 flex-grow bg-slate-200 hidden md:block"></div>
           <h4 class="text-4xl md:text-6xl font-black text-slate-950 tracking-tighter shrink-0">Partnership History</h4>
@@ -503,15 +514,12 @@
           <div class="absolute top-[20%] left-[10%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
              <img src="https://i.postimg.cc/QtBvxJdJ/bctteomineol.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
           </div>
-          
           <div class="absolute top-[15%] left-[28%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
              <img src="https://i.postimg.cc/HxfRJ8rt/busanhangmangongsa.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
           </div>
-          
           <div class="absolute top-[8%] left-[50%] w-14 h-14 sm:w-18 sm:h-18 md:w-24 md:h-24 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
              <img src="https://i.postimg.cc/NMWSy2Kb/san-eobtongsangbu-gug-jwau.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
           </div>
-          
           <div class="absolute top-[15%] left-[72%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
              <img src="https://i.postimg.cc/d17gtjV6/YGPA-gugmun-galo.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
           </div>
@@ -530,15 +538,12 @@
           <div class="absolute top-[40%] left-[85%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
              <img src="https://i.postimg.cc/mD0Jc1Py/busansinhangman.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
           </div>
-          
           <div class="absolute top-[60%] left-[8%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
              <img src="https://i.postimg.cc/JnyS45zj/hmm.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
           </div>
-          
           <div class="absolute top-[55%] left-[22%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
              <img src="https://i.postimg.cc/mD0Jc1cx/inteojiseu.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
           </div>
-          
           <div class="absolute top-[68%] left-[35%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
              <img src="https://i.postimg.cc/85q9Ff7t/seumateuemtuem.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
           </div>
@@ -574,7 +579,7 @@
     </div>
   </section>
 
-  <footer id="contact" class="bg-slate-950 py-20 border-t border-slate-800 relative overflow-hidden">
+  <footer id="contact" class="bg-slate-950 py-20 border-t border-slate-800 relative overflow-hidden reveal">
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
       <h2 class="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter">Ready To Contribute</h2>
@@ -591,6 +596,7 @@
   </footer>
 
   <script>
+    // 강점 가로 스크롤 관련 스크립트
     window.addEventListener('DOMContentLoaded', () => {
       const strengthsScroll = document.getElementById('strengths-scroll');
       if (strengthsScroll && window.innerWidth < 1024) { 
@@ -606,6 +612,18 @@
       container.addEventListener('mouseup', () => { isDown = false; container.classList.remove('cursor-grabbing'); });
       container.addEventListener('mousemove', (e) => { if (!isDown) return; e.preventDefault(); const x = e.pageX - container.offsetLeft; const walk = (x - startX) * 1.5; container.scrollLeft = scrollLeft - walk; });
     });
+
+    // 추가된 스크롤 등장 애니메이션(Intersection Observer) 스크립트
+    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target); // 한 번만 애니메이션 실행
+        }
+      });
+    }, observerOptions);
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
