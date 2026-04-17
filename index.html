@@ -60,7 +60,6 @@
       scroll-behavior: smooth;
     }
 
-    /* 새로 추가된 스크롤 애니메이션 클래스 */
     .reveal { 
       opacity: 0; 
       transform: translateY(40px); 
@@ -95,7 +94,7 @@
       <div class="order-2 lg:order-1 text-center lg:text-left mb-16 lg:mb-0 mt-8 lg:mt-0">
         <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-bold uppercase tracking-wider reveal">About Me</div>
         
-        <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-5 leading-[1.2] tracking-tight text-slate-950 break-keep reveal">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-5 leading-[1.4] tracking-tight text-slate-950 break-keep reveal">
           항만 실무를 아는<br>고객 지향 소통 전문가<br>
           <span class="whitespace-nowrap"> <span class="text-blue-600 font-black">박상현</span>입니다.</span>
         </h1>
@@ -115,7 +114,7 @@
           <div class="absolute inset-0 bg-blue-200/40 rounded-full blur-[80px]"></div>
           <img src="https://i.postimg.cc/vTZHW9R4/my-notion-face-transparent.png" alt="Profile" class="relative z-20 w-full h-full object-contain drop-shadow-2xl">
           <div class="floating absolute -top-4 -left-6 md:-top-4 md:-left-12 z-30 bg-white border border-slate-100 p-3 md:p-4 rounded-2xl shadow-xl text-center whitespace-nowrap">
-            <div class="text-blue-600 text-[10px] md:text-xs font-bold mb-1 uppercase">경력</div>
+            <div class="text-blue-600 text-[10px] md:text-xs font-bold mb-1 uppercase">실무 경력</div>
             <div class="text-sm md:text-xl font-black text-slate-900">7 Years</div>
           </div>
           <div class="floating absolute top-8 -right-8 md:top-12 md:-right-16 z-30 bg-white border border-slate-100 p-3 md:p-4 rounded-2xl shadow-xl text-center whitespace-nowrap" style="animation-delay: 0.2s;">
@@ -123,12 +122,12 @@
             <div class="text-sm md:text-lg font-black text-slate-900">24.5억+</div>
           </div>
           <div class="floating absolute bottom-12 -left-8 md:bottom-24 md:-left-20 z-30 bg-white border border-slate-100 p-3 md:p-4 rounded-2xl shadow-xl text-center whitespace-nowrap" style="animation-delay: 0.8s;">
-            <div class="text-sky-600 text-[10px] md:text-xs font-bold mb-1 uppercase">프로젝트 완수</div>
-            <div class="text-sm md:text-lg font-black text-slate-900">20개+</div>
+            <div class="text-sky-600 text-[10px] md:text-xs font-bold mb-1 uppercase">협업 고객사</div>
+            <div class="text-sm md:text-lg font-black text-slate-900">40곳+</div>
           </div>
           <div class="floating absolute -bottom-2 -right-6 md:bottom-6 md:-right-12 z-30 bg-white border border-slate-100 p-3 md:p-4 rounded-2xl shadow-xl text-center whitespace-nowrap" style="animation-delay: 0.5s;">
-            <div class="text-indigo-600 text-[10px] md:text-xs font-bold mb-1 uppercase">협업 고객사</div>
-            <div class="text-sm md:text-lg font-black text-slate-900">40곳+</div>
+            <div class="text-indigo-600 text-[10px] md:text-xs font-bold mb-1 uppercase">프로젝트 완수</div>
+            <div class="text-sm md:text-lg font-black text-slate-900">20개+</div>
           </div>
           
           <div class="floating absolute -bottom-16 md:-bottom-10 left-0 right-0 mx-auto w-max z-30 bg-slate-950 px-6 py-3 rounded-full shadow-xl shadow-slate-200" style="animation-delay: 1.5s;">
@@ -596,7 +595,6 @@
   </footer>
 
   <script>
-    // 강점 가로 스크롤 관련 스크립트
     window.addEventListener('DOMContentLoaded', () => {
       const strengthsScroll = document.getElementById('strengths-scroll');
       if (strengthsScroll && window.innerWidth < 1024) { 
@@ -613,13 +611,12 @@
       container.addEventListener('mousemove', (e) => { if (!isDown) return; e.preventDefault(); const x = e.pageX - container.offsetLeft; const walk = (x - startX) * 1.5; container.scrollLeft = scrollLeft - walk; });
     });
 
-    // 추가된 스크롤 등장 애니메이션(Intersection Observer) 스크립트
     const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          observer.unobserve(entry.target); // 한 번만 애니메이션 실행
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
