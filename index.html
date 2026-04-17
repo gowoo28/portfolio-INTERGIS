@@ -30,6 +30,11 @@
     }
     .animate-swipe { animation: swipe 1.5s ease-in-out infinite; }
 
+    /* 게이지바 빛 반사 애니메이션 추가 */
+    @keyframes shimmer {
+      100% { transform: translateX(100%); }
+    }
+
     .break-keep { word-break: keep-all; }
 
     .overflow-x-auto::-webkit-scrollbar {
@@ -234,43 +239,51 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group">
+          <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group hover:-translate-y-1 hover:shadow-lg hover:border-blue-300 transition-all duration-300 cursor-default">
             <div class="relative flex justify-center items-center mb-4">
-              <h5 class="text-lg font-black text-slate-900 tracking-tight">워드 프로세서</h5>
-              <span class="absolute right-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full shrink-0">중</span>
+              <h5 class="text-lg font-black text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors duration-300">워드 프로세서</h5>
+              <span class="absolute right-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full shrink-0 group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors duration-300">중</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
-              <div class="bg-blue-500 h-2 rounded-full w-[60%] transition-all duration-1000 ease-out origin-left group-hover:scale-x-105"></div>
+              <div class="bg-blue-400 h-2 rounded-full w-[60%] transition-all duration-500 ease-out group-hover:bg-blue-600 group-hover:w-[65%] relative overflow-hidden">
+                 <div class="absolute top-0 left-0 w-full h-full bg-white/30 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+              </div>
             </div>
           </div>
           
-          <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group">
+          <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group hover:-translate-y-1 hover:shadow-lg hover:border-blue-300 transition-all duration-300 cursor-default">
             <div class="relative flex justify-center items-center mb-4">
-              <h5 class="text-lg font-black text-slate-900 tracking-tight">프레젠테이션</h5>
-              <span class="absolute right-0 px-3 py-1 bg-blue-50 text-blue-600 border border-blue-100 text-xs font-bold rounded-full shrink-0">고급</span>
+              <h5 class="text-lg font-black text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors duration-300">프레젠테이션</h5>
+              <span class="absolute right-0 px-3 py-1 bg-blue-50 text-blue-600 border border-blue-100 text-xs font-bold rounded-full shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">고급</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
-              <div class="bg-blue-600 h-2 rounded-full w-[90%] transition-all duration-1000 ease-out origin-left group-hover:scale-x-105"></div>
+              <div class="bg-blue-500 h-2 rounded-full w-[90%] transition-all duration-500 ease-out group-hover:bg-blue-600 group-hover:w-[95%] relative overflow-hidden">
+                 <div class="absolute top-0 left-0 w-full h-full bg-white/30 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+              </div>
             </div>
           </div>
 
-          <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group">
+          <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group hover:-translate-y-1 hover:shadow-lg hover:border-blue-300 transition-all duration-300 cursor-default">
             <div class="relative flex justify-center items-center mb-4">
-              <h5 class="text-lg font-black text-slate-900 tracking-tight">스프레드시트</h5>
-              <span class="absolute right-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full shrink-0">중</span>
+              <h5 class="text-lg font-black text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors duration-300">스프레드시트</h5>
+              <span class="absolute right-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full shrink-0 group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors duration-300">중</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
-              <div class="bg-blue-500 h-2 rounded-full w-[60%] transition-all duration-1000 ease-out origin-left group-hover:scale-x-105"></div>
+              <div class="bg-blue-400 h-2 rounded-full w-[60%] transition-all duration-500 ease-out group-hover:bg-blue-600 group-hover:w-[65%] relative overflow-hidden">
+                 <div class="absolute top-0 left-0 w-full h-full bg-white/30 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+              </div>
             </div>
           </div>
 
-          <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group">
+          <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group hover:-translate-y-1 hover:shadow-lg hover:border-blue-300 transition-all duration-300 cursor-default">
             <div class="relative flex justify-center items-center mb-4">
-              <h5 class="text-lg font-black text-slate-900 tracking-tight">AI 툴 활용</h5>
-              <span class="absolute right-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full shrink-0">중</span>
+              <h5 class="text-lg font-black text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors duration-300">AI 툴 활용</h5>
+              <span class="absolute right-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full shrink-0 group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors duration-300">중</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
-              <div class="bg-blue-500 h-2 rounded-full w-[60%] transition-all duration-1000 ease-out origin-left group-hover:scale-x-105"></div>
+              <div class="bg-blue-400 h-2 rounded-full w-[60%] transition-all duration-500 ease-out group-hover:bg-blue-600 group-hover:w-[65%] relative overflow-hidden">
+                 <div class="absolute top-0 left-0 w-full h-full bg-white/30 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -282,19 +295,19 @@
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter shrink-0">Awards</h4>
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
         </div>
-        <div class="relative overflow-hidden bg-blue-600 rounded-[32px] p-8 md:p-12 shadow-xl border border-blue-700">
-           <div class="absolute -top-16 -right-16 w-48 h-48 bg-blue-400 rounded-full opacity-30"></div>
-           <div class="absolute -bottom-16 -left-16 w-32 h-32 bg-white rounded-full opacity-10"></div>
+        <div class="group relative overflow-hidden bg-blue-600 rounded-[32px] p-8 md:p-12 shadow-xl border border-blue-700 hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-2 transition-all duration-500 cursor-default">
+           <div class="absolute -top-16 -right-16 w-48 h-48 bg-blue-400 rounded-full opacity-30 group-hover:scale-150 group-hover:opacity-50 transition-transform duration-700 ease-in-out"></div>
+           <div class="absolute -bottom-16 -left-16 w-32 h-32 bg-white rounded-full opacity-10 group-hover:scale-150 group-hover:opacity-20 transition-transform duration-700 ease-in-out"></div>
            <div class="relative z-10 flex flex-col items-center text-center">
-              <div class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 border border-white/20 shadow-inner">
-                 <span class="text-white text-2xl">🏆</span>
+              <div class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 border border-white/20 shadow-inner group-hover:bg-white/20 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                 <span class="text-white text-2xl group-hover:animate-bounce">🏆</span>
               </div>
-              <p class="text-blue-100 font-bold uppercase tracking-[0.3em] text-xs md:text-sm mb-4 opacity-80">December 2023 / Industry Achievement</p>
-              <div class="text-white break-keep mb-6 flex flex-col gap-2">
+              <p class="text-blue-100 font-bold uppercase tracking-[0.3em] text-xs md:text-sm mb-4 opacity-80 group-hover:opacity-100 transition-opacity duration-300">December 2023 / Industry Achievement</p>
+              <div class="text-white break-keep mb-6 flex flex-col gap-2 transform group-hover:scale-105 transition-transform duration-300">
                 <p class="text-xl md:text-2xl font-bold opacity-90 leading-snug">한국공공브랜드대상</p>
-                <h5 class="text-2xl md:text-4xl font-black leading-tight">정부·브랜드 캠페인 부문 대상</h5>
+                <h5 class="text-2xl md:text-4xl font-black leading-tight group-hover:text-yellow-300 transition-colors duration-300">정부·브랜드 캠페인 부문 대상</h5>
               </div>
-              <div class="px-5 py-2 bg-white text-blue-600 rounded-full font-black text-xs md:text-sm uppercase tracking-widest shadow-md">
+              <div class="px-5 py-2 bg-white text-blue-600 rounded-full font-black text-xs md:text-sm uppercase tracking-widest shadow-md group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300">
                 한국공공브랜드진흥원 · 산업통상부
               </div>
            </div>
