@@ -1,594 +1,1187 @@
 <!DOCTYPE html>
+
 <html lang="ko" class="scroll-smooth">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+
   <title>박상현 포트폴리오</title>
+
   <style>
+
     body { font-family: "Pretendard", sans-serif; }
+
     .floating { animation: floating 3s ease-in-out infinite; }
+
     @keyframes floating {
+
       0%, 100% { transform: translateY(0); }
+
       50% { transform: translateY(-10px); }
+
     }
+
     .pulse-slow { animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
     @keyframes pulse {
+
       0%, 100% { opacity: 0.15; transform: scale(1); }
+
       50% { opacity: 0.3; transform: scale(1.1); }
+
     }
+
     .rotate-slow { animation: rotate 10s linear infinite; }
+
     @keyframes rotate {
+
       from { transform: rotate(0deg); }
+
       to { transform: rotate(360deg); }
+
     }
-    
+
+   
+
     @keyframes swipe {
+
       0%, 100% { transform: translateX(0); }
+
       50% { transform: translateX(-6px); }
+
     }
+
     .animate-swipe { animation: swipe 1.5s ease-in-out infinite; }
+
+
 
     .break-keep { word-break: keep-all; }
 
+
+
     .overflow-x-auto::-webkit-scrollbar {
+
       display: none;
+
     }
+
     .overflow-x-auto {
+
       -ms-overflow-style: none;
+
       scrollbar-width: none;
+
     }
-    
+
+   
+
     .no-select {
+
       user-select: none;
+
       -webkit-user-drag: none;
+
     }
-    
+
+   
+
     .scroll-container {
+
       -webkit-overflow-scrolling: touch;
+
       scroll-behavior: smooth;
+
     }
+
   </style>
+
 </head>
+
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
+
+
   <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
       <div class="text-xl font-black tracking-tighter text-blue-600 uppercase">portfolio</div>
+
       <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-500">
+
         <a href="#" class="text-blue-600">Home</a>
+
         <a href="#resume" class="hover:text-blue-600 transition">Resume</a>
+
         <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+
         <a href="#contact" class="hover:text-blue-600 transition border border-blue-200 px-4 py-1.5 rounded-full">Contact</a>
+
       </div>
+
     </div>
+
   </nav>
 
+
+
   <section class="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden">
+
     <div class="absolute top-1/4 -left-20 w-96 h-96 bg-blue-100 rounded-full blur-[120px] opacity-60"></div>
+
     <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-indigo-100 rounded-full blur-[120px] opacity-60"></div>
+
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full z-10">
+
       <div class="order-2 lg:order-1 text-center lg:text-left mb-16 lg:mb-0 mt-8 lg:mt-0">
+
         <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-bold uppercase tracking-wider">About Me</div>
-        
+
+       
+
         <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-5 leading-[1.2] tracking-tight text-slate-950 break-keep">
+
           항만 실무를 아는<br>고객 지향 소통 전문가<br>
+
           <span class="whitespace-nowrap"> <span class="text-blue-600 font-black">박상현</span>입니다.</span>
+
         </h1>
-        
-        <div class="flex flex-col items-center lg:items-start text-[12px] sm:text-[15px] md:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 tracking-tight break-keep">
-          <span>유연한 소통으로 복잡한 이해관계를 조율하며 운영의 안정을 이끌고<br class="hidden md:block">정교한 행정 처리로 24.5억 원 규모의 프로젝트를 완벽히 완수했습니다.<br class="hidden md:block">준비된 실무 전문가로서 인터지스의 운영 효율 극대화에 기여하겠습니다.</span>
+
+       
+
+        <div class="flex flex-col items-center lg:items-start text-[12px] sm:text-[15px] md:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 tracking-tight">
+
+          <span class="whitespace-nowrap">유연한 소통으로 복잡한 이해관계를 조율하며 운영의 안정을 이끌고<br>정교한 행정 처리로 24.5억 원 규모의 프로젝트를 완벽히 완수했습니다.<br>준비된 실무 전문가로서 인터지스의 운영 효율 극대화에 기여하겠습니다.</span>
+
         </div>
+
+
 
         <div class="flex flex-wrap justify-center lg:justify-start gap-5">
+
           <a href="#resume" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-xl shadow-blue-200 inline-block">이력사항 보기</a>
+
           <a href="#experience" class="bg-white hover:bg-slate-50 border border-slate-200 px-10 py-4 rounded-xl font-bold shadow-sm transition-all transform hover:-translate-y-1 inline-block">실무역량 보기</a>
+
         </div>
+
       </div>
-      
+
+     
+
       <div class="order-1 lg:order-2 flex justify-center relative mt-10 lg:mt-0 mb-12 lg:mb-0">
+
         <div class="relative w-64 h-64 md:w-[420px] md:h-[420px]">
+
           <div class="absolute inset-0 bg-blue-200/40 rounded-full blur-[80px]"></div>
+
           <img src="https://i.postimg.cc/vTZHW9R4/my-notion-face-transparent.png" alt="Profile" class="relative z-20 w-full h-full object-contain drop-shadow-2xl">
+
           <div class="floating absolute -top-4 -left-6 md:-top-4 md:-left-12 z-30 bg-white border border-slate-100 p-3 md:p-4 rounded-2xl shadow-xl text-center whitespace-nowrap">
+
             <div class="text-blue-600 text-[10px] md:text-xs font-bold mb-1 uppercase">경력</div>
+
             <div class="text-sm md:text-xl font-black text-slate-900">7 Years</div>
+
           </div>
+
           <div class="floating absolute top-8 -right-8 md:top-12 md:-right-16 z-30 bg-white border border-slate-100 p-3 md:p-4 rounded-2xl shadow-xl text-center whitespace-nowrap" style="animation-delay: 0.2s;">
+
             <div class="text-teal-600 text-[10px] md:text-xs font-bold mb-1 uppercase">누적 예산 집행</div>
+
             <div class="text-sm md:text-lg font-black text-slate-900">24.5억+</div>
+
           </div>
+
           <div class="floating absolute bottom-12 -left-8 md:bottom-24 md:-left-20 z-30 bg-white border border-slate-100 p-3 md:p-4 rounded-2xl shadow-xl text-center whitespace-nowrap" style="animation-delay: 0.8s;">
+
             <div class="text-sky-600 text-[10px] md:text-xs font-bold mb-1 uppercase">프로젝트 완수</div>
+
             <div class="text-sm md:text-lg font-black text-slate-900">20개+</div>
+
           </div>
+
           <div class="floating absolute -bottom-2 -right-6 md:bottom-6 md:-right-12 z-30 bg-white border border-slate-100 p-3 md:p-4 rounded-2xl shadow-xl text-center whitespace-nowrap" style="animation-delay: 0.5s;">
+
             <div class="text-indigo-600 text-[10px] md:text-xs font-bold mb-1 uppercase">협력 고객사</div>
+
             <div class="text-sm md:text-lg font-black text-slate-900">20곳+</div>
+
           </div>
-          
+
+         
+
           <div class="floating absolute -bottom-16 md:-bottom-10 left-0 right-0 mx-auto w-max z-30 bg-slate-950 px-6 py-3 rounded-full shadow-xl shadow-slate-200" style="animation-delay: 1.5s;">
+
             <div class="flex items-center gap-2 text-white">
+
               <span class="w-2 h-2 bg-blue-400 rounded-full animate-ping"></span>
+
               <span class="text-sm font-bold tracking-tight">Client Relations Expert</span>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
+
+
 
   <section id="resume" class="py-16 md:py-24 bg-white relative z-20 border-t border-slate-100 overflow-hidden">
+
     <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+
       <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-[120px]"></div>
+
       <div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-indigo-50/40 rounded-full blur-[150px]"></div>
+
       <div class="absolute top-10 left-0 w-full overflow-hidden leading-none select-none opacity-[0.03] pointer-events-none z-0 hidden md:block">
+
         <h2 class="text-[15vw] font-black whitespace-nowrap uppercase text-slate-900">RESUME</h2>
+
       </div>
+
     </div>
+
+
 
     <div class="max-w-6xl mx-auto px-6 relative z-10 pt-24 md:pt-[18vw]">
+
       <div class="flex flex-col md:flex-row items-center md:items-end justify-between border-b-4 border-slate-900 pb-8 mb-10 gap-8">
+
         <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+
           <div class="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden bg-slate-100 shadow-inner border border-slate-100">
+
              <img src="https://i.postimg.cc/vTZHW9R4/my-notion-face-transparent.png" alt="Profile" class="w-full h-full object-contain scale-110 pt-4">
+
           </div>
+
           <div class="text-center md:text-left">
+
             <h3 class="text-6xl md:text-8xl font-black text-slate-900 tracking-tighter mb-4">박상현</h3>
+
             <p class="text-lg sm:text-xl md:text-3xl text-blue-600 font-bold tracking-tight whitespace-nowrap">Client Relations Expert</p>
+
           </div>
+
         </div>
+
         <div class="text-center md:text-right text-slate-500 font-semibold text-base md:text-lg space-y-2">
+
           <a href="mailto:gowoo28@gmail.com" class="block hover:text-blue-600 transition-colors font-bold tracking-tight break-keep">gowoo28@gmail.com</a>
+
           <a href="tel:010-8368-2022" class="block hover:text-blue-600 transition-colors font-bold tracking-tight">010-8368-2022</a>
+
           <p class="font-bold tracking-tight">Busan, Korea</p>
+
         </div>
+
       </div>
 
+
+
       <div class="mb-16 md:mb-20 max-w-4xl mx-auto">
+
         <div class="flex items-center justify-center gap-6 mb-8 md:mb-12 text-center">
+
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
+
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter shrink-0">Journey</h4>
+
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
+
         </div>
+
         <div class="relative">
+
           <div class="absolute left-1/2 top-2 bottom-0 w-[2px] md:w-[4px] bg-slate-100 -translate-x-1/2"></div>
+
           <div class="space-y-12 md:space-y-20">
-            
+
+           
+
             <div class="relative flex flex-row justify-between w-full group">
+
               <div class="absolute left-1/2 top-1 md:top-2 w-4 h-4 md:w-6 md:h-6 bg-blue-600 rounded-full ring-4 md:ring-8 ring-white shadow-md -translate-x-1/2 group-hover:scale-125 transition-transform z-10"></div>
+
               <div class="w-1/2 text-right pr-5 md:pr-16">
+
                 <div class="text-[13px] sm:text-base md:text-xl font-bold text-blue-600 tracking-tight leading-tight">2019. 12 -<br class="block md:hidden"> 2026. 03</div>
+
                 <div class="text-[9px] md:text-sm font-bold text-slate-400 uppercase tracking-widest mt-1 md:mt-2">Company</div>
+
               </div>
+
               <div class="w-1/2 text-left pl-5 md:pl-16">
+
                 <h5 class="text-[15px] sm:text-lg md:text-3xl font-black text-slate-900 mb-1 md:mb-3 tracking-tight break-keep">(주)와이위</h5>
+
                 <p class="text-[12px] sm:text-sm md:text-lg text-slate-600 font-bold leading-tight">전략기획실 PM</p>
+
               </div>
+
             </div>
 
+
+
             <div class="relative flex flex-row justify-between w-full group">
+
               <div class="absolute left-1/2 top-1 md:top-2 w-4 h-4 md:w-6 md:h-6 bg-slate-300 rounded-full ring-4 md:ring-8 ring-white shadow-md -translate-x-1/2 group-hover:scale-125 transition-transform z-10"></div>
+
               <div class="w-1/2 text-right pr-5 md:pr-16">
+
                 <div class="text-[13px] sm:text-base md:text-xl font-bold text-slate-500 tracking-tight leading-tight">2013. 03 -<br class="block md:hidden"> 2020. 02</div>
+
                 <div class="text-[9px] md:text-sm font-bold text-slate-400 uppercase tracking-widest mt-1 md:mt-2">University</div>
+
               </div>
+
               <div class="w-1/2 text-left pl-5 md:pl-16">
+
                 <h5 class="text-[15px] sm:text-lg md:text-3xl font-black text-slate-800 mb-1 md:mb-3 tracking-tight break-keep">경성대학교</h5>
+
                 <p class="text-[12px] sm:text-sm md:text-lg text-slate-500 font-bold leading-tight">광고홍보학과</p>
+
               </div>
+
             </div>
+
+
 
             <div class="relative flex flex-row justify-between w-full group">
+
               <div class="absolute left-1/2 top-1 md:top-2 w-4 h-4 md:w-6 md:h-6 bg-slate-200 rounded-full ring-4 md:ring-8 ring-white shadow-md -translate-x-1/2 group-hover:scale-125 transition-transform z-10"></div>
+
               <div class="w-1/2 text-right pr-5 md:pr-16">
+
                 <div class="text-[13px] sm:text-base md:text-xl font-bold text-slate-500 tracking-tight leading-tight">2010. 03 -<br class="block md:hidden"> 2013. 02</div>
+
                 <div class="text-[9px] md:text-sm font-bold text-slate-400 uppercase tracking-widest mt-1 md:mt-2">High School</div>
+
               </div>
+
               <div class="w-1/2 text-left pl-5 md:pl-16">
+
                 <h5 class="text-[15px] sm:text-lg md:text-3xl font-black text-slate-700 mb-1 md:mb-3 tracking-tight break-keep">부산중앙고등학교</h5>
+
                 <p class="text-[12px] sm:text-sm md:text-lg text-slate-500 font-bold leading-tight">문과</p>
+
               </div>
+
             </div>
 
+
+
           </div>
+
         </div>
+
       </div>
 
+
+
       <div class="mb-16 md:mb-20 max-w-4xl mx-auto">
+
         <div class="flex items-center justify-center gap-6 mb-8 md:mb-12 text-center">
+
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
+
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter shrink-0">Certifications</h4>
+
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
+
         </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
           <div class="group relative overflow-hidden bg-white border-2 border-slate-100 p-6 md:p-8 rounded-3xl transition-all hover:border-blue-600 shadow-sm cursor-pointer flex flex-col items-center md:items-start text-center md:text-left">
+
              <div class="absolute top-4 right-6 text-slate-100 group-hover:text-blue-50 font-black text-4xl transition-colors opacity-40 md:opacity-100">2018</div>
+
              <p class="text-slate-400 group-hover:text-blue-600 text-xs font-bold uppercase tracking-widest mb-2 relative z-10">Adobe Certified</p>
+
              <h5 class="text-slate-900 text-xl md:text-2xl font-black tracking-tight relative z-10">ACA Illustrator</h5>
+
           </div>
+
           <div class="group relative overflow-hidden bg-white border-2 border-slate-100 p-6 md:p-8 rounded-3xl transition-all hover:border-blue-600 shadow-sm cursor-pointer flex flex-col items-center md:items-start text-center md:text-left">
+
              <div class="absolute top-4 right-6 text-slate-100 group-hover:text-blue-50 font-black text-4xl transition-colors opacity-40 md:opacity-100">2017</div>
+
              <p class="text-slate-400 group-hover:text-blue-600 text-xs font-bold uppercase tracking-widest mb-2 relative z-10">Adobe Certified</p>
+
              <h5 class="text-slate-900 text-xl md:text-2xl font-black tracking-tight relative z-10">ACA Indesign</h5>
+
           </div>
+
           <div class="group relative overflow-hidden bg-white border-2 border-slate-100 p-6 md:p-8 rounded-3xl transition-all hover:border-blue-600 shadow-sm cursor-pointer flex flex-col items-center md:items-start text-center md:text-left">
+
              <div class="absolute top-4 right-6 text-slate-100 group-hover:text-blue-50 font-black text-4xl transition-colors opacity-40 md:opacity-100">2017</div>
+
              <p class="text-slate-400 group-hover:text-blue-600 text-xs font-bold uppercase tracking-widest mb-2 relative z-10">Adobe Certified</p>
+
              <h5 class="text-slate-900 text-xl md:text-2xl font-black tracking-tight relative z-10">ACA Photoshop</h5>
+
           </div>
+
           <div class="group relative overflow-hidden bg-slate-100 p-6 md:p-8 rounded-3xl transition-all hover:bg-slate-200 shadow-sm cursor-pointer flex flex-col items-center md:items-start text-center md:text-left">
+
              <div class="absolute top-4 right-6 text-slate-200 group-hover:text-slate-300 font-black text-4xl transition-colors opacity-40 md:opacity-100">2013</div>
+
              <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2 relative z-10">Government</p>
+
              <h5 class="text-slate-900 text-xl md:text-2xl font-black tracking-tight relative z-10">1종보통 운전면허</h5>
+
           </div>
+
         </div>
+
       </div>
 
+
+
       <div class="mb-16 md:mb-20 max-w-4xl mx-auto">
+
         <div class="flex items-center justify-center gap-6 mb-8 md:mb-12 text-center">
+
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
+
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter shrink-0">Skills</h4>
+
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
+
         </div>
-        
+
+       
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+
           <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group">
+
             <div class="relative flex justify-center items-center mb-4">
+
               <h5 class="text-lg font-black text-slate-900 tracking-tight">워드 프로세서</h5>
+
               <span class="absolute right-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full shrink-0">중</span>
+
             </div>
+
             <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+
               <div class="bg-blue-500 h-2 rounded-full w-[60%] transition-all duration-1000 ease-out origin-left group-hover:scale-x-105"></div>
+
             </div>
+
           </div>
-          
+
+         
+
           <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group">
+
             <div class="relative flex justify-center items-center mb-4">
+
               <h5 class="text-lg font-black text-slate-900 tracking-tight">프레젠테이션</h5>
+
               <span class="absolute right-0 px-3 py-1 bg-blue-50 text-blue-600 border border-blue-100 text-xs font-bold rounded-full shrink-0">고급</span>
+
             </div>
+
             <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+
               <div class="bg-blue-600 h-2 rounded-full w-[90%] transition-all duration-1000 ease-out origin-left group-hover:scale-x-105"></div>
+
             </div>
+
           </div>
 
+
+
           <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group">
+
             <div class="relative flex justify-center items-center mb-4">
+
               <h5 class="text-lg font-black text-slate-900 tracking-tight">스프레드시트</h5>
+
               <span class="absolute right-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full shrink-0">중</span>
+
             </div>
+
             <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+
               <div class="bg-blue-500 h-2 rounded-full w-[60%] transition-all duration-1000 ease-out origin-left group-hover:scale-x-105"></div>
+
             </div>
+
           </div>
 
+
+
           <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm group">
+
             <div class="relative flex justify-center items-center mb-4">
+
               <h5 class="text-lg font-black text-slate-900 tracking-tight">AI 툴 활용</h5>
+
               <span class="absolute right-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full shrink-0">중</span>
+
             </div>
+
             <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+
               <div class="bg-blue-500 h-2 rounded-full w-[60%] transition-all duration-1000 ease-out origin-left group-hover:scale-x-105"></div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
+
 
       <div class="mb-16 md:mb-20 max-w-4xl mx-auto">
+
         <div class="flex items-center justify-center gap-6 mb-8 md:mb-12 text-center">
+
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
+
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter shrink-0">Awards</h4>
+
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
+
         </div>
+
         <div class="relative overflow-hidden bg-blue-600 rounded-[32px] p-8 md:p-12 shadow-xl border border-blue-700">
+
            <div class="absolute -top-16 -right-16 w-48 h-48 bg-blue-400 rounded-full opacity-30"></div>
+
            <div class="absolute -bottom-16 -left-16 w-32 h-32 bg-white rounded-full opacity-10"></div>
+
            <div class="relative z-10 flex flex-col items-center text-center">
+
               <div class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 border border-white/20 shadow-inner">
+
                  <span class="text-white text-2xl">🏆</span>
+
               </div>
+
               <p class="text-blue-100 font-bold uppercase tracking-[0.3em] text-xs md:text-sm mb-4 opacity-80">December 2023 / Industry Achievement</p>
+
               <div class="text-white break-keep mb-6 flex flex-col gap-2">
+
                 <p class="text-xl md:text-2xl font-bold opacity-90 leading-snug">한국공공브랜드대상</p>
+
                 <h5 class="text-2xl md:text-4xl font-black leading-tight">정부·브랜드 캠페인 부문 대상</h5>
+
               </div>
+
               <div class="px-5 py-2 bg-white text-blue-600 rounded-full font-black text-xs md:text-sm uppercase tracking-widest shadow-md">
+
                 한국공공브랜드진흥원 · 산업통상부
+
               </div>
+
            </div>
+
         </div>
+
       </div>
+
+
 
       <div class="max-w-7xl mx-auto w-full pb-8 md:pb-12 relative z-10 flex flex-col items-center">
+
         <div class="flex items-center justify-center gap-6 mb-8 w-full max-w-4xl mx-auto px-6 text-center">
+
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
+
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter shrink-0">Strengths</h4>
+
           <div class="h-1 flex-grow bg-slate-100 hidden md:block"></div>
+
         </div>
-        
+
+       
+
         <div class="relative w-full carousel-wrapper max-w-7xl mx-auto px-4">
+
           <div class="swipe-indicator absolute top-4 right-6 z-50 md:hidden pointer-events-none transition-opacity duration-500 animate-swipe">
+
             <span class="bg-slate-900/80 text-white text-[11px] font-bold px-3 py-2 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm">
+
               <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>
-              스와이프 
+
+              스와이프
+
               <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+
             </span>
+
           </div>
+
+
 
           <div id="strengths-scroll" class="scroll-container flex flex-nowrap items-center justify-start lg:justify-center -space-x-5 lg:-space-x-8 py-6 px-12 md:px-6 overflow-x-auto lg:overflow-visible bg-transparent snap-x snap-mandatory cursor-grab active:cursor-grabbing w-full">
+
             <div class="flex-shrink-0 relative z-10 group/item cursor-pointer hover:z-50 transition-all duration-300 snap-center">
+
               <div class="relative flex items-center justify-center w-[180px] h-[180px] lg:w-[250px] lg:h-[250px] border border-blue-400 rounded-full bg-transparent group-hover/item:bg-blue-600 group-hover/item:border-blue-600 group-hover/item:scale-105 group-hover/item:shadow-2xl transition-all duration-300 ease-out bg-slate-50">
+
                 <div class="flex flex-col items-center justify-center text-center gap-1.5 w-full px-4 max-w-[140px] lg:max-w-[200px]">
+
                   <p class="text-[13px] sm:text-base lg:text-xl font-black text-blue-600 group-hover/item:text-white tracking-tight break-keep transition-colors duration-300 no-select">#책임감 및 성실함</p>
+
                 </div>
+
               </div>
+
             </div>
+
             <div class="flex-shrink-0 relative z-20 group/item cursor-pointer hover:z-50 transition-all duration-300 snap-center">
+
               <div class="relative flex items-center justify-center w-[180px] h-[180px] lg:w-[250px] lg:h-[250px] border border-blue-400 rounded-full bg-transparent group-hover/item:bg-blue-600 group-hover/item:border-blue-600 group-hover/item:scale-105 group-hover/item:shadow-2xl transition-all duration-300 ease-out bg-slate-50">
+
                 <div class="flex flex-col items-center justify-center text-center gap-1.5 w-full px-4 max-w-[140px] lg:max-w-[200px]">
+
                   <p class="text-[13px] sm:text-base lg:text-xl font-black text-blue-600 group-hover/item:text-white tracking-tight break-keep transition-colors duration-300 no-select">#꼼꼼한 관리 능력</p>
+
                 </div>
+
               </div>
+
             </div>
+
             <div class="flex-shrink-0 relative z-30 group/item cursor-pointer hover:z-50 transition-all duration-300 snap-center">
+
               <div class="relative flex items-center justify-center w-[180px] h-[180px] lg:w-[250px] lg:h-[250px] border border-blue-400 rounded-full bg-transparent group-hover/item:bg-blue-600 group-hover/item:border-blue-600 group-hover/item:scale-105 group-hover/item:shadow-2xl transition-all duration-300 ease-out bg-slate-50">
+
                 <div class="flex flex-col items-center justify-center text-center gap-1.5 w-full px-4 max-w-[140px] lg:max-w-[200px]">
+
                   <p class="text-[13px] sm:text-base lg:text-xl font-black text-blue-600 group-hover/item:text-white tracking-tight break-keep transition-colors duration-300 no-select">#고객지향 소통 능력</p>
+
                 </div>
+
               </div>
+
             </div>
+
             <div class="flex-shrink-0 relative z-40 group/item cursor-pointer hover:z-50 transition-all duration-300 snap-center">
+
               <div class="relative flex items-center justify-center w-[180px] h-[180px] lg:w-[250px] lg:h-[250px] border border-blue-400 rounded-full bg-transparent group-hover/item:bg-blue-600 group-hover/item:border-blue-600 group-hover/item:scale-105 group-hover/item:shadow-2xl transition-all duration-300 ease-out bg-slate-50">
+
                 <div class="flex flex-col items-center justify-center text-center gap-1.5 w-full px-4 max-w-[140px] lg:max-w-[200px]">
+
                   <p class="text-[13px] sm:text-base lg:text-xl font-black text-blue-600 group-hover/item:text-white tracking-tight break-keep transition-colors duration-300 no-select">#항만 물류 이해도</p>
+
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
+
+
 
   <section id="experience" class="py-16 md:py-24 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-100 relative z-10 overflow-hidden border-t border-slate-200">
+
     <div class="absolute top-10 left-0 w-full overflow-hidden leading-none select-none opacity-[0.03] pointer-events-none z-0 hidden md:block">
+
         <h2 class="text-[15vw] font-black whitespace-nowrap uppercase text-slate-900">EXPERIENCE</h2>
+
     </div>
-    
+
+   
+
     <div class="max-w-7xl mx-auto px-6 relative z-10 pt-24 md:pt-[18vw]">
+
       <div class="flex items-center justify-center gap-6 mb-10 w-full max-w-4xl mx-auto px-6 text-center">
+
         <div class="h-1 flex-grow bg-slate-200 hidden md:block"></div>
+
         <h4 class="text-4xl md:text-6xl font-black text-slate-950 tracking-tighter shrink-0">Relevant Experience</h4>
+
         <div class="h-1 flex-grow bg-slate-200 hidden md:block"></div>
+
       </div>
-      
+
+     
+
       <div class="mb-16">
+
         <div class="mb-8 px-6 max-w-3xl mx-auto text-center">
+
           <h5 class="text-2xl md:text-3xl font-black text-slate-900 mb-3 break-keep">부산항 및 BPA 소개 홍보동영상 제작 경험</h5>
+
           <p class="text-[13px] sm:text-sm md:text-lg text-slate-700 leading-relaxed font-medium tracking-tight break-keep">
-            부산항만공사와 진행한 부산항 및 BPA 홍보 프로젝트를 통해<br class="hidden md:block"> 인터지스를 포함한 부산항 전반의 물류 현장 경험을 쌓았습니다.
+
+            부산항만공사와 진행한 부산항 및 BPA 홍보 프로젝트를 통해<br> 인터지스를 포함한 부산항 전반의 물류 현장 경험을 쌓았습니다.
+
           </p>
+
         </div>
+
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-6">
+
           <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative">
+
             <img src="https://i.postimg.cc/L8dFb7vj/1.png" alt="부산항 프로젝트 1" class="w-full h-full object-cover">
+
           </div>
+
           <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative">
+
             <img src="https://i.postimg.cc/6psxmSzR/2.png" alt="부산항 프로젝트 2" class="w-full h-full object-cover">
+
           </div>
+
           <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative">
+
             <img src="https://i.postimg.cc/CxypQtJf/3.png" alt="부산항 프로젝트 3" class="w-full h-full object-cover">
+
           </div>
+
           <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative">
+
             <img src="https://i.postimg.cc/zGmYcMph/4.png" alt="부산항 프로젝트 4" class="w-full h-full object-cover">
+
           </div>
+
           <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative">
+
             <img src="https://i.postimg.cc/RZcx5Rbc/5.png" alt="부산항 프로젝트 5" class="w-full h-full object-cover">
+
           </div>
+
           <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative">
+
             <img src="https://i.postimg.cc/MpyJ2Dr7/6.png" alt="부산항 프로젝트 6" class="w-full h-full object-cover">
+
           </div>
+
           <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative">
+
             <img src="https://i.postimg.cc/x1VBRmTL/10.png" alt="부산항 프로젝트 10" class="w-full h-full object-cover">
+
           </div>
+
           <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative">
+
             <img src="https://i.postimg.cc/02wLDnxm/7.png" alt="부산항 프로젝트 7" class="w-full h-full object-cover">
+
           </div>
+
           <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative">
+
             <img src="https://i.postimg.cc/VLC3ng1t/8.png" alt="부산항 프로젝트 8" class="w-full h-full object-cover">
+
           </div>
+
           <div class="aspect-square bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative">
+
             <img src="https://i.postimg.cc/dVcgBCtr/9.png" alt="부산항 프로젝트 9" class="w-full h-full object-cover">
+
           </div>
+
         </div>
+
       </div>
-      
+
+     
+
       <div>
+
         <div class="mb-8 px-6 max-w-3xl mx-auto text-center">
+
           <h5 class="text-2xl md:text-3xl font-black text-slate-900 mb-3 break-keep">블록체인 기반 환적모니터링시스템 홍보 콘텐츠 제작 경험</h5>
+
           <p class="text-[13px] sm:text-sm md:text-lg text-slate-700 leading-relaxed font-medium tracking-tight break-keep">
-            블록체인 기반 환적모니터링시스템 홍보 콘텐츠 제작 프로젝트를 통해<br class="hidden md:block">부산항의 디지털 전환 및 항만 물류 프로세스를 깊이 있게 경험했습니다.
+
+            블록체인 기반 환적모니터링시스템 홍보 콘텐츠 제작 프로젝트를 통해<br>부산항의 디지털 전환 및 항만 물류 프로세스를 깊이 있게 경험했습니다.
+
           </p>
+
         </div>
+
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-6">
+
           <div class="bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative aspect-[4/3]">
+
              <img src="https://i.postimg.cc/vHCxSQpj/11.png" alt="스마트엠투엠 프로젝트 11" class="w-full h-full object-cover">
+
           </div>
+
           <div class="bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative aspect-[4/3]">
+
              <img src="https://i.postimg.cc/c4Pt5sVc/12.png" alt="스마트엠투엠 프로젝트 12" class="w-full h-full object-cover">
+
           </div>
+
           <div class="bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative aspect-[4/3]">
+
              <img src="https://i.postimg.cc/8Pxfn1qy/13.png" alt="스마트엠투엠 프로젝트 13" class="w-full h-full object-cover">
+
           </div>
+
           <div class="bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative aspect-[4/3]">
+
              <img src="https://i.postimg.cc/2SvbssDc/14.png" alt="스마트엠투엠 프로젝트 14" class="w-full h-full object-cover">
+
           </div>
+
           <div class="bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative aspect-[4/3]">
+
              <img src="https://i.postimg.cc/bwbD77h5/15.png" alt="스마트엠투엠 프로젝트 15" class="w-full h-full object-cover">
+
           </div>
+
           <div class="bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative aspect-[4/3]">
+
              <img src="https://i.postimg.cc/htxzkknF/16.png" alt="스마트엠투엠 프로젝트 16" class="w-full h-full object-cover">
+
           </div>
+
           <div class="bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative aspect-[4/3]">
+
              <img src="https://i.postimg.cc/8zWJ22GV/17.png" alt="스마트엠투엠 프로젝트 17" class="w-full h-full object-cover">
+
           </div>
+
           <div class="bg-slate-100 rounded-2xl overflow-hidden group border border-slate-200 shadow-sm hover:border-blue-300 transition-all hover:shadow-lg hover:-translate-y-1 relative aspect-[4/3]">
+
              <img src="https://i.postimg.cc/GpC8dX3d/18.png" alt="스마트엠투엠 프로젝트 18" class="w-full h-full object-cover">
+
           </div>
+
         </div>
+
       </div>
+
+
 
       <div class="mt-16 md:mt-24 relative w-full z-10">
+
         <div class="flex items-center justify-center gap-6 mb-8 w-full max-w-4xl mx-auto px-6 text-center">
+
           <div class="h-1 flex-grow bg-slate-200 hidden md:block"></div>
+
           <h4 class="text-4xl md:text-6xl font-black text-slate-950 tracking-tighter shrink-0">Partnership History</h4>
+
           <div class="h-1 flex-grow bg-slate-200 hidden md:block"></div>
+
         </div>
-        
+
+       
+
         <div class="w-full px-6 mb-10 flex justify-center z-10 relative">
+
           <p class="text-[13px] sm:text-sm md:text-lg text-slate-700 leading-relaxed font-medium tracking-tight text-center break-keep max-w-2xl">
+
             국가 주요 부처부터 항만·물류 유관 기관까지, 비즈니스 파트너의 니즈를 관통하는<br class="hidden md:block">유연한 소통으로 최적의 협업 결과를 만들어 왔습니다.
+
           </p>
+
         </div>
+
+
 
         <div class="block relative w-full h-[450px] sm:h-[500px] md:h-[600px] lg:h-[800px] max-w-6xl mx-auto z-10 mt-8">
+
           <svg class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-40">
+
               <line x1="50%" y1="50%" x2="10%" y2="20%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="28%" y2="15%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="50%" y2="8%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="72%" y2="15%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="90%" y2="20%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="15%" y2="40%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="30%" y2="35%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="70%" y2="35%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="85%" y2="40%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="8%" y2="60%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="22%" y2="55%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="35%" y2="68%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="65%" y2="68%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="78%" y2="55%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="92%" y2="60%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="20%" y2="80%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="40%" y2="85%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="50%" y2="75%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="60%" y2="85%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="80%" y2="80%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
               <line x1="50%" y1="50%" x2="50%" y2="28%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />
+
           </svg>
 
+
+
           <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-32 h-32 md:w-56 md:h-56 flex items-center justify-center">
+
             <div class="absolute inset-0 bg-blue-100/50 rounded-full blur-[30px] md:blur-[60px] scale-150"></div>
+
             <img src="https://i.postimg.cc/vTZHW9R4/my-notion-face-transparent.png" alt="Profile" class="relative z-10 w-full h-full object-contain drop-shadow-2xl floating">
+
           </div>
-          
+
+         
+
           <div class="absolute top-[20%] left-[10%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/QtBvxJdJ/bctteomineol.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
-          
+
+         
+
           <div class="absolute top-[15%] left-[28%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/HxfRJ8rt/busanhangmangongsa.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
-          
+
+         
+
           <div class="absolute top-[8%] left-[50%] w-14 h-14 sm:w-18 sm:h-18 md:w-24 md:h-24 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/NMWSy2Kb/san-eobtongsangbu-gug-jwau.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
-          
+
+         
+
           <div class="absolute top-[15%] left-[72%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/d17gtjV6/YGPA-gugmun-galo.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[20%] left-[90%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/TwyBYJ3Q/gaseugongsa.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[40%] left-[15%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/DZWRyPwg/gugmingeongangboheomgongdan.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[35%] left-[30%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/rmv3dRDS/gihueneojihwangyeongbu.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[35%] left-[70%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/C1WXZnRG/munchebu.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[40%] left-[85%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/mD0Jc1Py/busansinhangman.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
-          
+
+         
+
           <div class="absolute top-[60%] left-[8%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/JnyS45zj/hmm.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
-          
+
+         
+
           <div class="absolute top-[55%] left-[22%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/mD0Jc1cx/inteojiseu.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
-          
+
+         
+
           <div class="absolute top-[68%] left-[35%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/85q9Ff7t/seumateuemtuem.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[68%] left-[65%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/FR28fkYB/sinseondaegammanteomineol.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[55%] left-[78%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/gJfQwLx5/anbogong.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[60%] left-[92%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/hjH6JQX6/eichiem-empieseueisinhangman.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[80%] left-[20%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/PxB9LvC0/yetag-won.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[85%] left-[40%] w-14 h-14 sm:w-18 sm:h-18 md:w-24 md:h-24 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/85FxPmzh/POSCO.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[75%] left-[50%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/KzdwK3Kh/hangug-eneojigongdan.gif" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[85%] left-[60%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/NMWSy2yw/hangugjasangwanligongsa.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[80%] left-[80%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/gJfQwLwG/hanjeon.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
           <div class="absolute top-[28%] left-[50%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+
              <img src="https://i.postimg.cc/63Dg747t/heochiseunteomineol.png" class="w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
+
+
   <footer id="contact" class="bg-slate-950 py-20 border-t border-slate-800 relative overflow-hidden">
+
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50"></div>
+
     <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+
       <h2 class="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter">Let's Work Together</h2>
+
       <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-16">
+
         <a href="mailto:gowoo28@gmail.com" class="flex items-center gap-3 text-white bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full transition-all border border-white/10 group w-full md:w-auto justify-center">
+
           <span class="font-bold tracking-tight">gowoo28@gmail.com</span>
+
         </a>
+
         <a href="tel:010-8368-2022" class="flex items-center gap-3 text-white bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full transition-all border border-white/10 group w-full md:w-auto justify-center">
+
           <span class="font-bold tracking-tight">010-8368-2022</span>
+
         </a>
+
       </div>
+
       <p class="text-slate-600 text-xs font-semibold tracking-wider uppercase">© 2026 PARK SANG HYEON. ALL RIGHTS RESERVED.</p>
+
     </div>
+
   </footer>
 
+
+
   <script>
+
     window.addEventListener('DOMContentLoaded', () => {
+
       const strengthsScroll = document.getElementById('strengths-scroll');
-      if (strengthsScroll && window.innerWidth < 1024) { 
+
+      if (strengthsScroll && window.innerWidth < 1024) {
+
         strengthsScroll.scrollLeft = (strengthsScroll.scrollWidth - strengthsScroll.clientWidth) / 2;
+
       }
+
     });
 
+
+
     const scrollContainers = document.querySelectorAll('.scroll-container');
+
     let isDown = false; let startX; let scrollLeft;
+
     scrollContainers.forEach(container => {
+
       container.addEventListener('mousedown', (e) => { isDown = true; container.classList.add('cursor-grabbing'); startX = e.pageX - container.offsetLeft; scrollLeft = container.scrollLeft; });
+
       container.addEventListener('mouseleave', () => { isDown = false; container.classList.remove('cursor-grabbing'); });
+
       container.addEventListener('mouseup', () => { isDown = false; container.classList.remove('cursor-grabbing'); });
+
       container.addEventListener('mousemove', (e) => { if (!isDown) return; e.preventDefault(); const x = e.pageX - container.offsetLeft; const walk = (x - startX) * 1.5; container.scrollLeft = scrollLeft - walk; });
+
     });
+
   </script>
+
 </body>
+
 </html>
